@@ -1,1 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<style>
+table,tr,
+td
+{
+	border: solid black;
+	width: 30%;
+	text-align: center;
+	border-collapse: collapse;
+	background-color:lightgreen;
+
+}
+table 
+{ 
+	margin: auto;
+} 
+
+.blinking 
+{
+	animation: blinkingText 1.2s infinite;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    text-align: center;
+    
+}
+@keyframes blinkingText{
+    0%{     color: blue;    }
+    49%{    color: transparent; }
+    60%{    color: blue; }
+    99%{    color: transparent;  }
+    100%{   color: blue;    }
+}
+
+th
+{
+	text-align: center;
+
+}
+</style>
+<script>
+document.write( "<table><tr><th colspan='3'>NUMBERS FROM 0 TO 10 WITH THEIR QUARES AND CUBES</th></tr>" );
+document.write( "<tr><td>Number</td><td>Square</td><td>Cube</td></tr>" );
+
+for(var n=100; n<=1000; n+=100)
+{
+	document.write( "<tr><td>" + n + "</td><td>" + n*n + "</td><td>"+ n*n*n + "</td></tr>" ) ;
+}
+document.write( "</table>" ) ;
+</script>
+</head>
+<body>
+	<span class="blinking"><p><center>Assignment-2 Challenge Completed</center></p></span>
+</body>
+</html>
 
