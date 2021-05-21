@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+
+#demo{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+  <article>
+  <header>
+    <a href="https://Home/">Home</a> |
+    <a href="https://Places/">Places</a> |
+    <a href="https://Gallery/">Gallery</a> |
+    <a href="https://About Us/">About Us</a> |
+    <a href="https://Search/">Search</a> 
+    <h1>FOREST ROADS</h1>
+    <img src="road1.jpg.jpg" width="400" height="300">
+    <p>by <u>Bhoomika BV</u></p>
+    <p>Forest roads or forest tracks are roads or tracks intended to carry motorised vehicles or horse-drawn wagons being used mainly or exclusively for forestry purposes, such as conservation or logging. Forest roads may be open to ramblers or mountain bikers depending on local rules.</p>
+    <p>Year: 2020</p>
+    <p>Date: 18th September</p>
+  </header>
+  
+</article>
+
+<p id="demo"></p>
+<div id="#demo">
+<script>
+var var1 = setInterval(inTimer, 500);
+var fs = 5; //font size
+var ids = document.getElementById("demo");
+function inTimer()
+{
+ids.innerHTML = 'FOREST RETREAT';
+ids.setAttribute('style', "font-size: " + fs + "px; color: red");
+fs += 5;
+if (fs >= 50)
+{
+clearInterval(var1); //paused
+var2 = setInterval(deTimer, 500);
+
+}
+}
+function deTimer() //fs = 50px
+{
+fs -= 5;
+ids.innerHTML = 'FOREST RETREAT';
+ids.setAttribute('style', "font-size: " + fs + "px; color: blue");
+if (fs == 5)
+{
+clearInterval(var2); //paused
+var1 = setInterval(inTimer, 500);
+}
+}
+</script>
+</div>
+
+<h3>Reviews</h3>
+<p><Strong>Nice!</Strong> <br>Rachel
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</p>
+<p><Small>Good one</Small></p> <hr>
+
+<p><Strong>Such a view</Strong> <br>Ross
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</p>
+<p><Small>Miss driving through those forest roads.</Small></p> <hr>   
+
+<p><Strong>Lovely</Strong> <br>Monica
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+</p>
+<p><Small>The scenery is beautiful</Small></p> <hr>
+
+<footer>
+  <a href="https://Home/">Home</a> |
+    <a href="https://Places/">Places</a> |
+    <a href="https://Gallery/">Gallery</a> |
+    <a href="https://About Us/">About Us</a>
+    <p>Copyright @ 2020 Forest Roads</p>
+</footer>
+
+</body>
+</html>
